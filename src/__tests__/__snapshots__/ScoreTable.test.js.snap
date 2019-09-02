@@ -43,7 +43,7 @@ Array [
       </svg>
     </div>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline searchField"
+      className="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-input-3"
       onClick={[Function]}
     >
       <input

@@ -100,7 +100,7 @@ function ScoreTable( props ) {
         </Select>
         <Input
           placeholder="Search listing..."
-          className="searchField"
+          className={classes.input}
           onChange={searchData}
           inputProps={{
             'aria-label': 'Search the scores',
