@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` renders countryBased component correctly 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-2 MuiPaper-rounded"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+      >
+        Scores by Gender
+      </h2>
+      <div
+        className="recharts-wrapper"
+        style={
+          Object {
+            "cursor": "default",
+            "height": 400,
+            "position": "relative",
+            "width": 800,
+          }
+        }
+      >
+        <svg
+          className="recharts-surface"
+          height={400}
+          version="1.1"
+          viewBox="0 0 800 400"
+          width={800}
+        >
+          <defs>
+            <clipPath
+              id="recharts1-clip"
+            >
+              <rect
+                height={390}
+                width={790}
+                x={5}
+                y={5}
+              />
+            </clipPath>
+          </defs>
+          <g
+            className="recharts-layer recharts-pie"
+          >
+            <g
+              className="recharts-layer"
+            >
+              <g
+                className="recharts-layer recharts-pie-sector"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <g>
+                  <text
+                    dy={8}
+                    fill="#8884d8"
+                    textAnchor="middle"
+                    x={305}
+                    y={205}
+                  >
+                    Male
+                  </text>
+                  <path
+                    d="M350,127.05771365940052L360,109.73720558371176L382,109.73720558371176"
+                    fill="none"
+                    stroke="#8884d8"
+                  />
+                  <circle
+                    cx={382}
+                    cy={109.73720558371176}
+                    fill="#8884d8"
+                    r={2}
+                    stroke="none"
+                  />
+                  <text
+                    fill="#333"
+                    textAnchor="start"
+                    x={394}
+                    y={109.73720558371176}
+                  >
+                    Average is 22
+                  </text>
+                </g>
+              </g>
+              <g
+                className="recharts-layer recharts-pie-sector"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              />
+              <g
+                className="recharts-layer recharts-pie-sector"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
