@@ -1,27 +1,9 @@
-import React, { useState } from 'react';
-import { LineChart, Line, Legend, Tooltip, CartesianGrid, Bar, XAxis, YAxis, Area, ComposedChart } from 'recharts';
+import React from 'react';
+import { Legend, Tooltip, CartesianGrid, Bar, XAxis, YAxis, ComposedChart } from 'recharts';
 import Title from '../Title';
-import { makeStyles } from '@material-ui/styles';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-  },
-  paper: {
-    padding: theme.spacing(2),
-    display: 'flex',
-    overflow: 'auto',
-    flexDirection: 'column',
-  },
-  fixedHeight: {
-    height: 240,
-  },
-}));
 
 export default function CountryBased( props ){
   
-  const {peopleData} = props;
-  const [data, setData] = useState();
   let filteredData = [];
 
   const filterData = ()=>{

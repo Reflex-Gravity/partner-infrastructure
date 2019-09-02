@@ -1,14 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer'
-import Enzyme, { shallow, render, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16'
 
 import Utils from '../utils/Utils'
 import ScoreTable from '../ScoreTable';
 import {peopleData} from '../peopleData'
-
-Enzyme.configure({adapter: new Adapter()})
 
 it(' renders countryBased component correctly', ()=>{
   const tree = renderer
