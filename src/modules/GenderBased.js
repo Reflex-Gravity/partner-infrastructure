@@ -28,17 +28,17 @@ export default function GenderBased( props ){
 
   const filterData = (props) => {
     props.peopleData && [...props.peopleData].forEach(_data => {
+       // Check if current gender has already been iterated and added.
+      let currentGenderData = filteredData.find(_filteredData => _filteredData.gender === _data.gender);
 
-      let thisGender = filteredData.find(_filteredData => _filteredData.gender === _data.gender);
+      if (currentGenderData) {
 
-      if (thisGender) {
-
-        thisGender.score = (thisGender.score + _data.score);
-        thisGender.count = ++thisGender.count;
-        thisGender.average = parseInt((thisGender.score + _data.score) / ++thisGender.count);
+        currentGenderData.score = (currentGenderData.score + _data.score); // Add the current person's score to the previous total.
+        currentGenderData.count = ++currentGenderData.count; // Increase the count of occurence
+        currentGenderData.average = parseInt(currentGenderData.score / currentGenderData.count);  // Calculate the average and update it.
 
       } else {
-
+         // If current gender has not been added then, set default data and add it.
         filteredData = [
           ...filteredData,
           {

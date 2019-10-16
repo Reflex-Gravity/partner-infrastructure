@@ -104,12 +104,16 @@ export default function Dashboard() {
   const [open, setOpen] = React.useState(true);
   const [ peopleData, setData ] = React.useState([]);
   const [ sortType, setSortType ] = React.useState("none");
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
+
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  // Switch between sort types.
   const handleSortType = sortType => () =>{
     setSortType(sortType);
   };
@@ -130,6 +134,7 @@ export default function Dashboard() {
   }, []);
 
   const RenderDashboard = () => {
+    // Render dashboard based sort type selection.
 
       switch (sortType) {
 
@@ -168,7 +173,7 @@ export default function Dashboard() {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Holidu Interview Dashboard
+            Dashboard
           </Typography>
         </Toolbar>
       </AppBar>
@@ -186,15 +191,11 @@ export default function Dashboard() {
         </div>
         <Divider />
         <List>
-          <MainListItems
-            handleSortType={ handleSortType}
-          />
+          <MainListItems handleSortType={ handleSortType}/>
         </List>
         <Divider />
         <List>
-          <SecondaryListItems
-            handleSortType = {handleSortType}
-          />
+          <SecondaryListItems handleSortType = {handleSortType}/>
         </List>
       </Drawer>
       <main className={classes.content}>

@@ -1,25 +1,10 @@
-import React, { useState} from 'react';
+import React from 'react';
 import { LineChart, Line, Legend, Tooltip, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
 
-// // Generate Data
-// function createData(country, score, count) {
-//   return { country, score, count };
-// }
-
-// // const data = [
-// //   createData('DE', 79),
-// //   createData('UK', 63),
-// //   createData('FR', 76),
-// //   createData('ES', 68),
-// //   createData('NL', 90),
-// //   createData('IT', 55),
-// //   createData('AU', undefined),
-// // ];
 
 function Chart( props ) {
 
-  const [data, setData] = useState();
   let filteredData = [];
 
   const filterData = (peopleData)=>{

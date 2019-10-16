@@ -84,7 +84,7 @@ exports[` renders countryBased component correctly 1`] = `
                     x={394}
                     y={109.73720558371176}
                   >
-                    Average is 22
+                    Average is 44
                   </text>
                 </g>
               </g>

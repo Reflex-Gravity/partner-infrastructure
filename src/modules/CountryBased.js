@@ -6,32 +6,33 @@ export default function CountryBased( props ){
   
   let filteredData = [];
 
+  // Filter and group the data based on country.
   const filterData = ()=>{
 
     props.peopleData && [...props.peopleData].forEach(_data => {
-        
-        let thisCountry = filteredData.find(_country => _country.country === _data.country);
+      // Check if current country has already been iterated and added.
+      let currentCountryData = filteredData.find(_filteredData => _filteredData.country === _data.country);
 
-        if( thisCountry ){
-          
-          thisCountry.score = (thisCountry.score + _data.score);
-          thisCountry.count = ++thisCountry.count;
-          thisCountry.average = parseInt((thisCountry.score + _data.score)/++thisCountry.count);
+      if( currentCountryData ){
+        currentCountryData.score = (currentCountryData.score + _data.score); // Add the current person's score to the previous total.
+        currentCountryData.count = ++currentCountryData.count; // Increase the count of occurence
+        currentCountryData.average = parseInt((currentCountryData.score) / currentCountryData.count); // Calculate the average and update it.
 
-        } else {
+      } else {
+        // If current country has not been added then, set default data and add it.
+        filteredData = [
+          ...filteredData,
+          {
+          score : _data.score === null ? 0 : _data.score,
+          count : 1,
+          country : _data.country,
+          average : _data.score === null ? 0 : _data.score
+        }];
+      }
+    });
 
-          filteredData = [
-            ...filteredData,
-            {
-            score : _data.score === null ? 0 : _data.score,
-            count : 1,
-            country : _data.country,
-            average : _data.score === null ? 0 : _data.score
-          }];
-        }
-      });
-
-    filteredData.sort(function(a, b) { 
+    // Sort the filtered data based on country
+    filteredData.sort(function(a, b) {
       if( a.country > b.country){
         return 1;
       } else {

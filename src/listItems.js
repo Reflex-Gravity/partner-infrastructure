@@ -6,6 +6,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
+// Main dashboard lists
 export const MainListItems = ( props ) => {
   return (<div>
     <ListItem
@@ -21,6 +22,7 @@ export const MainListItems = ( props ) => {
 );
 }
 
+// Saved reports list
 export const SecondaryListItems = (props) => {
   return (
     <div> 
